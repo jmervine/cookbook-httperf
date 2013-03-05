@@ -1,3 +1,5 @@
 site :opscode
 
-metadata
+cookbook "autoconf", git: "https://github.com/rubyops/cookbook-autoconf.git", branch: "master"
+
+# vim: filetype=ruby
