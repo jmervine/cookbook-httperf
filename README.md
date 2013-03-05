@@ -2,22 +2,31 @@
 
 # Requirements
 
-    build_essentials -- [http://community.opscode.com/cookbooks/build-essential]
+    build-essentials -- [http://community.opscode.com/cookbooks/build-essential]
     git              -- [http://community.opscode.com/cookbooks/git]
     autoconf         -- [http://github.com/rubyops/cookbook-autoconf]
 
 # Usage
 
+    // file: nodes/host.json
     {
-        [ "recipe[httperf::default]" ]
+        // Required for build-essential.
+        //
+        // See build-essential docs for custom configs,
+        // empty configs as below are acceptable for
+        // defaults.
+        "build_essential": {},
+
+        // Include autoconf recipe.
+        "run_list": [ "recipe[autoconf::default]" ]
     }
 
 # Attributes
 
+    // file: nodes/host.json
     {
-        // optional
        "httperf": {
-           "branch": "master", // default == nil and therefore isn't used
+           "branch": "master",     // default == nil and therefore isn't used
            "cache": "/tmp/httperf" // << default
        }
        ...

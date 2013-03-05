@@ -24,7 +24,6 @@ git "#{cache}" do
   action :export
   repository url
   revision branch unless branch.nil? || branch.empty?
-  creates cache
 end
 
 execute "autoreconf -i" do
