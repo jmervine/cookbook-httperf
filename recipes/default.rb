@@ -2,10 +2,6 @@
 # Cookbook Name:: httperf
 # Recipe:: default
 #
-# Copyright (C) 2013 YOUR_NAME
-#
-# All rights reserved - Do Not Redistribute
-#
 if node["platform"] == "windows"
   return "#{node['platform']} is not supported by the #{cookbook_name}::#{recipe_name} recipe"
 end
