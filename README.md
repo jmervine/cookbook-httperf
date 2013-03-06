@@ -2,9 +2,13 @@
 
 # Requirements
 
-    build-essentials -- [http://community.opscode.com/cookbooks/build-essential]
-    git              -- [http://community.opscode.com/cookbooks/git]
-    autoconf         -- [http://github.com/rubyops/cookbook-autoconf]
+* [build-essentials](http://community.opscode.com/cookbooks/build-essential)
+* [git](http://community.opscode.com/cookbooks/git)
+* [autoconf](http://github.com/rubyops/cookbook-autoconf)
+
+## This has been tested on:
+
+* CentOS 6.2
 
 # Usage
 
