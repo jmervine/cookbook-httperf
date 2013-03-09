@@ -31,8 +31,10 @@
     // file: nodes/host.json
     {
        "httperf": {
-           "branch": "master",     // default == nil and therefore isn't used
-           "cache": "/tmp/httperf" // << default
+           "src_url": "https://github.com/rubyops/httperf.git",
+           "git_branch": "master",     // default == nil and therefore isn't used
+           "cache_dir": "/usr/local/src" // << default
+           "dest_dir": "/tmp/httperf" // << default
        }
        ...
     }

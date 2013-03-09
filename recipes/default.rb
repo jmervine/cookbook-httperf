@@ -10,16 +10,16 @@ include_recipe "build-essential"
 include_recipe 'git'
 include_recipe "autoconf"
 
-url    = "https://github.com/rubyops/httperf.git"
-branch = node['httperf']['branch'] rescue nil
-cache  = (node['httperf']['cache'] || "/tmp/httperf") rescue "/tmp/httperf"
-dest   = "/usr/local/bin"
+url    = node['httperf']['src_url']
+branch = node['httperf']['git_branch']
+cache  = node['httperf']['cache_dir']
+dest   = node['httperf']['dest_dir']
 ver    = "0.9.1"
 
 git "#{cache}" do
   action :export
   repository url
-  revision branch unless branch.nil? || branch.empty?
+  revision branch
 end
 
 execute "autoreconf -i" do
